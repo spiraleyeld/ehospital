@@ -11,7 +11,9 @@ session(時段)-ssno(時段編號), ssname(時段名稱), timestart(起始時間
 empsite(不同區域各時段員工配置表)-siteno, ssno, empno
 
 ### View:
+
 schedule:siteno, sname, empno, ename, ssno, timestart, timeend
+
 onduty:在schedule的基礎下多一層時間判定status(ps.也可以直接在schedule中就展現此欄位）
 
 
