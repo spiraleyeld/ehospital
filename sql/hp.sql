@@ -35,15 +35,11 @@ create table session (
   constraint pk_session_pno primary key(ssno)
 );
 
-<<<<<<< HEAD
+
 insert into session values('ss01','morning','090000','120000');
 insert into session values('ss02','afternoon','140000','180000');
 insert into session values('ss03','night','190000','220000');
-=======
-insert into session values('ss01','morning','09:00:00','12:00:00');
-insert into session values('ss02','afternoon','14:00:00','18:00:00');
-insert into session values('ss03','night','19:00:00','22:00:00');
->>>>>>> 73234a68b60929f00daf5fcd81392ac0063dfabe
+
 
 
 
@@ -78,8 +74,6 @@ create view schedule as
                    left join site d on a.siteno = d.siteno;
 
 
-<<<<<<< HEAD
+
 create view onduty as select *,case when current_time()>timestart and current_time()<timeend then 'on_duty' else '' end status from schedule;
-=======
-create view onduty as select *,case when current_time()>timestart and current_time()<timeend then 'on_duty' else '' end status from schedule;
->>>>>>> 73234a68b60929f00daf5fcd81392ac0063dfabe
+
