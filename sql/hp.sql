@@ -28,15 +28,16 @@ insert into emp values('e02','wei');
 drop table if exists session;
 
 create table session (
-  siteno varchar(5) not null,  
   ssno varchar(5) not null,
-  empno varchar(5) not null,
+  ssname varchar(20) not null,
+  timestart varchar(20) not null,
+  timeend varchar(20) not null,
   constraint pk_session_pno primary key(ssno)
 );
 
-insert into session values('ss01','morning');
-insert into session values('ss02','afternoon');
-insert into session values('ss03','night');
+insert into session values('ss01','morning','090000','120000');
+insert into session values('ss02','afternoon','140000','180000');
+insert into session values('ss03','night','190000','220000');
 
 
 
@@ -47,6 +48,7 @@ create table empsite (
   siteno varchar(5) not null,
   ssno varchar(5) not null,
   empno varchar(5) not null,
+
   constraint pk_empsite_sitessemp primary key(siteno,ssno,empno),
   constraint fk_empsite_siteno foreign key(siteno) references site(siteno),
   constraint fk_empsite_ssno foreign key(ssno) references session(ssno),
@@ -60,3 +62,10 @@ insert into empsite values('s01','ss03','e02');
 insert into empsite values('s02','ss01','e02');
 insert into empsite values('s02','ss02','e02');
 insert into empsite values('s02','ss03','e01');
+
+
+create view schedule as 
+    select a.siteno, d.sname, a.empno,c.ename, a.ssno,b.timestart, b.timeend 
+    from empsite a left join session b on a.ssno=b.ssno 
+                   left join emp c on a.empno=c.empno 
+                   left join site d on a.siteno = d.siteno;
