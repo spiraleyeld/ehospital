@@ -63,9 +63,13 @@ insert into empsite values('s02','ss01','e02');
 insert into empsite values('s02','ss02','e02');
 insert into empsite values('s02','ss03','e01');
 
+drop view if exists schedule;
 
 create view schedule as 
     select a.siteno, d.sname, a.empno,c.ename, a.ssno,b.timestart, b.timeend 
     from empsite a left join session b on a.ssno=b.ssno 
                    left join emp c on a.empno=c.empno 
                    left join site d on a.siteno = d.siteno;
+
+
+create view onduty as select *,case when current_time()>timestart and current_time()<timeend then 'on_duty' else '' end status from schedule;
