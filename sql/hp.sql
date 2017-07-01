@@ -35,9 +35,9 @@ create table session (
   constraint pk_session_pno primary key(ssno)
 );
 
-insert into session values('ss01','morning','090000','120000');
-insert into session values('ss02','afternoon','140000','180000');
-insert into session values('ss03','night','190000','220000');
+insert into session values('ss01','morning','09:00:00','12:00:00');
+insert into session values('ss02','afternoon','14:00:00','18:00:00');
+insert into session values('ss03','night','19:00:00','22:00:00');
 
 
 
