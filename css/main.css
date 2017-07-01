@@ -1,0 +1,41 @@
+body {
+	background:black;
+	margin-top:35px;
+
+}
+
+#table {
+	background:black;
+	font-size:20px;
+	border:yellow;
+	color:white;
+}
+
+#cssSiteno, #cssSsno, {
+	background:pink;
+}
+
+#pacman {
+	text-align:center;
+	color:red;
+	font-weight:bold;
+	background:black;
+}
+
+#count {
+	color:white;
+}
+
+th {
+	background:gold;
+	color:black;
+}
+
+h1 {
+ color:white;
+}
+
+a {
+ color:white;
+}
+
