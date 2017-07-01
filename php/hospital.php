@@ -31,19 +31,24 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 		<title>護士執勤輪班表</title>
+	    <style>
+	    	<?php include ('main.css'); ?>
+	    </style>
 	</head>
 	<body>
 		<h1 align='center'>護士執勤輪班狀態</h1>
-		<p align='center'>目前資料筆數：<?php echo $total_records; ?>， 
+		<p align='center' id='count'>目前資料筆數：<?php echo $total_records; ?>， 
 		   <a href='updateEMP.php'>人員資料異動</a>
 		   <a href='updateDUTY.php'>人員配置異動</a>
 		</p>
 
-		<table border='1' align='center'>
+		<table border='1' align='center' id='table'>
 			<!-- 表格表頭 -->
 			<tr>
 				<th>執勤區域</th>
+
 				<th>執勤人員</th>
 				<th>起始時間</th>
 				<th>結束時間</th>
@@ -58,7 +63,13 @@
 					echo '<td>'.$row_result['ename'].'</td>';
 					echo '<td>'.$row_result['timestart'].'</td>';
 					echo '<td>'.$row_result['timeend'].'</td>';
-					echo '<td>'.$row_result['status'].'</td>';
+					if ($row_result['status'] == 'on_duty') {
+						echo '<td id="pacman">'.'<img src="pacman.png">'.'</td>';
+						##echo '<td id="pacman">'.'執勤中'.'</td>';
+					}elseif ($row_result['status'] != 'on_duty'){
+						echo '<td>'.''.'</td>';
+					}
+				}
 					
 					##echo '<td align = center >'.$row_result['gender'].'</td>';
 					##echo '<td align = center >'.$row_result['no'].'</td>';
@@ -69,7 +80,7 @@
 					
 					##echo "<a href='delete.php?id=".$row_result["no"]."'>刪除</a></td>";
 					##echo "</tr>";
-				}
+				
 			?>
 		</table>
 		<table border="0" align="center">
@@ -84,7 +95,7 @@
 				<?php }?>
 			</tr>
 		</table>
-		<table border='0' align='center'>
+		<table border='0' align='center' id='count'>
 			<tr>
 				<td>
 					頁數：

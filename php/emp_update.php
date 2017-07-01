@@ -33,12 +33,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>會員管理系統</title>
+	    <style>
+	    	<?php include ('main.css'); ?>
+	    </style>
 	</head>
 	<body>
 		<h1 align='center'>護士管理系統-員工修改</h1>
 		<p align="center"><a href='updateEMP.php'>回員工明細</a></p>	
 		<form action="" method="post" name="formFix" id="formFix">
-			<table border='1' align='center' cellpading='4'>
+			<table border='1' align='center' cellpading='4' id='table'>
 				<tr>
 					<th>欄位</th><th>資料</th>
 				</tr>

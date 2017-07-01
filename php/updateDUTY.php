@@ -31,11 +31,14 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>員工明細</title>
+	    <style>
+	    	<?php include ('main.css'); ?>
+	    </style>
 	</head>
 	<body>
 		<h1 align='center'>執勤配置表</h1>
-		<p align='center'>目前資料筆數：<?php echo $total_records; ?> <a href='hospital.php'>回主畫面</a></p>
-		<table border='1' align='center'>
+		<p align='center' id='count'>目前資料筆數：<?php echo $total_records; ?> <a href='hospital.php'>回主畫面</a></p>
+		<table border='1' align='center' id='table'>
 			<!-- 表格表頭 -->
 			<tr>
 				<th>執勤區域</th>
@@ -71,7 +74,7 @@
 				<?php }?>
 			</tr>
 		</table>
-		<table border='0' align='center'>
+		<table border='0' align='center' id='count'>
 			<tr>
 				<td>
 					頁數：

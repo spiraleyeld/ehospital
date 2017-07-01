@@ -33,21 +33,24 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>會員管理系統</title>
+		<title  id='title'>會員管理系統</title>
+		<style>
+	    	<?php include ('main.css'); ?>
+	    </style>
 	</head>
 	<body>
 		<h1 align='center'>護士管理系統-員工修改</h1>
 		<p align="center"><a href='updateEMP.php'>回員工明細</a></p>	
 		<form action="" method="post" name="formFix" id="formFix">
-			<table border='1' align='center' cellpading='4'>
+			<table border='2' align='center' cellpading='4' id='table'>
 				<tr>
 					<th>欄位</th><th>資料</th>
 				</tr>
 				<tr>
-					<td>執勤區域</td><td><input readonly='value' name="cSiteno" id="cSiteno" value="<?php echo $siteno;?>"></td>
+					<td>執勤區域</td><td><input readonly='value' name="Siteno" id="cssSiteno" value="<?php echo $siteno;?>"></td>
 		
 				</tr>
-					<td>執勤時段</td><td><input readonly='value' name="cSsno" id="cSsno" value="<?php echo $ssno;?>"></td>
+					<td>執勤時段</td><td><input readonly='value' name="cSsno" id="cssSsno" value="<?php echo $ssno;?>"></td>
 				<tr>
 					<td>員工編號</td><td><input type="text" name="cEmpno" id="cEmpno" value="<?php echo $empno;?>"></td>
 				</tr>			
