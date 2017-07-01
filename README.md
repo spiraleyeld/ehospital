@@ -1,5 +1,9 @@
 ### ehospital
 
+
+
+
+
 ## 主畫面
 ![Markdown1](pics/main.png)
 
@@ -20,11 +24,11 @@
 ![Markdown1](pics/emp_delete.png)
 
 
-## 執勤分配明細
+## 執勤配置明細
 ![Markdown1](pics/duty_list.png)
 
 
-## 執勤分配負責人員＿修改
+## 執勤配置負責人員＿修改
 ![Markdown1](pics/duty_update.png)
 
 
