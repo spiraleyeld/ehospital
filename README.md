@@ -1,6 +1,6 @@
 ## 最後呈現
 
-![Markdown1](pics/csstype.png)
+![Markdown1](pics/main.png)
 
 ## 說明
 
