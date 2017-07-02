@@ -33,7 +33,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title  id='title'>會員管理系統</title>
+		<title>會員管理系統</title>
 		<style>
 	    	<?php include ('main.css'); ?>
 	    </style>

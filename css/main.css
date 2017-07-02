@@ -11,8 +11,9 @@ body {
 	color:white;
 }
 
-#cssSiteno, #cssSsno, {
+#cssSiteno, #cssSsno {
 	background:pink;
+	font-weight:bold;
 }
 
 #pacman {
